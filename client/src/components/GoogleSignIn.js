@@ -17,7 +17,7 @@ const GoogleSignIn = () => {
       buttonText="Sign in with Google"
       onSuccess={responseGoogleSuccess}
       onFailure={responseGoogleFailure}
-      cookiePolicy={'single_host_origin'}
+     
     />
   );
 };

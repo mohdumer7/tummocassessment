@@ -9,7 +9,7 @@ export function useUpdateuser(authToken) {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-  axios.get('http://localhost:5000/user', {
+  axios.get('http://localhost:5001/user', {
         headers: {
           Authorization: `Bearer ${authToken}`
         }

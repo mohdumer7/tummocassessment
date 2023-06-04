@@ -9,7 +9,7 @@ const { authenticate } = require('../middleware/testAuthMiddleware');
 // Read all users
 router.get('/',authenticate, userController.getuser);
 
-
+router.get('/getall',userController.getAllUsers)
 // // Update a user
 // router.put('/:id', userController.updateUser);
 

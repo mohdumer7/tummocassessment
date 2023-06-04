@@ -14,9 +14,17 @@ const Layout = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  
+  const logout = ()=>{
+    
+    // const googleAuth = ()=>{
+    //   window.open("http://localhost:5001/auth/logout","_self")
+    // }
+    navigate(0)
+  }
 
   useEffect(()=>{
-      axios.get('http://localhost:5000/user', {
+      axios.get('http://localhost:5001/user', {
         headers: {
           Authorization: `Bearer ${authToken}`
         }
@@ -35,7 +43,7 @@ const Layout = () => {
   {user && (<div className={`w-full bg-slate-100 ${showModal?'blur-xl':''}`} >
     <nav className='w-full p-4 flex justify-between items-center text-white bg-slate-600 shadow-2xl'>
         <div>Tummoc Assessment (Mohammed Umer)</div>
-        <button className="p-2 bg-blue-500 rounded-md hover:bg-blue-800 transition">LOGOUT</button>
+        <button onClick={logout} className="p-2 bg-blue-500 rounded-md hover:bg-blue-800 transition">LOGOUT</button>
     </nav>
     <div className='w-full h-1/4  flex flex-col justify-center items-center m-7'>
         <h1 className='w-full  text-center text-black font-bold text-7xl'>{`Hi, ${user.name}`}</h1>

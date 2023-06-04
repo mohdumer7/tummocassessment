@@ -13,7 +13,7 @@ const Main = ({user}) => {
  const cities = useSelector((state) => state.cities);
 
  const deleteCard = (id)=>{
-  axios.delete(`http://localhost:5000/city/${id}`, {
+  axios.delete(`http://localhost:5001/city/${id}`, {
     headers: {
       Authorization: `Bearer ${authToken}`
     }

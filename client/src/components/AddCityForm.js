@@ -25,7 +25,7 @@ const AddCityForm = ({setShowModal,authToken}) => {
   const onSubmit = async (e)=>{
     console.log(cityForm)
     e.preventDefault()
-    axios.post('http://localhost:5000/city', cityForm,{
+    axios.post('http://localhost:5001/city', cityForm,{
       headers: {
         Authorization: `Bearer ${authToken}`
       }

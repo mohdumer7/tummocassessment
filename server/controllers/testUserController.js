@@ -14,7 +14,7 @@ const createUser = async (req, res) => {
 // Read all users with populated cities
 const getAllUsers = async (req, res) => {
   try {
-    const users = await populateUsersWithCities();
+    const users = await User.find();
     // const users = await User.find().populate();
     res.json(users);
   } catch (err) {
