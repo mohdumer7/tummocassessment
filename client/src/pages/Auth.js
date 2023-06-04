@@ -80,9 +80,7 @@ const Register = (registeruser,google=false)=>{
     <div className="w-full h-screen ">
        <Toaster/>
     <div className='h-screen w-full flex flex-col justify-center items-center'>
-        <div>
-        <h1>All the required data here</h1>
-        </div>
+       
 
         <div className='w-1/4  shadow-2xl  flex flex-col rounded-lg '>
             <h1 className='w-full bg-gray-800 text-white p-2 text-center rounded-tl-lg rounded-tr-lg'>{login?'LOGIN':'SIGN UP'}</h1>
