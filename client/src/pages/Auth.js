@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LoginForm from '../components/LoginForm';
 import SignupForm from '../components/SignupForm';
+import { Toaster } from 'react-hot-toast';
+
 
 const Auth = () => {
     const[login,setLogin] = useState(true);
-
+    
+    
   return (
     <div className="w-full h-screen ">
+       <Toaster/>
     <div className='h-screen w-full flex flex-col justify-center items-center'>
         <div>
         <h1>All the required data here</h1>
@@ -17,8 +21,8 @@ const Auth = () => {
             <div className='flex justify-center p-3 w-full'>
 
             {login?
-            <LoginForm setLogin={setLogin}/>:
-            <SignupForm setLogin={setLogin}/>}
+            <LoginForm setLogin={setLogin} />:
+            <SignupForm setLogin={setLogin} />}
         </div>
         </div>
 
